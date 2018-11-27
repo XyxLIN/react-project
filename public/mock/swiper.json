@@ -1,0 +1,116 @@
+{
+    "poiBasicInfo": {
+    "blackCode": 0,
+    "imgList": [
+    {
+    "aggregation": false,
+    "imgs": [
+    {
+    "count": 1,
+    "imgDesc": "173bcb127088646ae6d72e78e3c56f1.png",
+    "urls": [
+    "https://p1.meituan.net/128.180/hotel/3f5058b47f31f8113c4a01d50d1be604950782.png"
+    ]
+    },
+    {
+    "count": 1,
+    "imgDesc": "微信图片_20181115103051.png",
+    "urls": [
+    "https://p1.meituan.net/128.180/hotel/9ab7453b24b72f12ea30acb22f5a6d421403637.png"
+    ]
+    },
+    {
+    "count": 1,
+    "imgDesc": "微信图片_20181115213835.jpg",
+    "urls": [
+    "https://p0.meituan.net/128.180/hotel/3ccd9e8f77774540f1ff39e28d5f91da873478.jpg"
+    ]
+    },
+    {
+    "count": 1,
+    "imgDesc": "BD001.png",
+    "urls": [
+    "https://p0.meituan.net/128.180/hotel/204487b3725a617efd1e69be156fce7c1033987.png"
+    ]
+    },
+    {
+    "count": 1,
+    "imgDesc": "37fd89bd8baab52f2b9f4de657761c1.jpg",
+    "urls": [
+    "https://p1.meituan.net/128.180/hotel/38f1ca4dce24f3bbbd2eff4fdfdad1f0854353.jpg"
+    ]
+    },
+    {
+    "count": 1,
+    "imgDesc": "9b9c58ea4c10328642d754511fde115.jpg",
+    "urls": [
+    "https://p1.meituan.net/128.180/hotel/fedc93962ace344f1d1716a8c850975a864680.jpg"
+    ]
+    },
+    {
+    "count": 1,
+    "imgDesc": "微信图片_20181115213822.jpg",
+    "urls": [
+    "https://p0.meituan.net/128.180/hotel/70aecbcb5dae735864c4c1cd609dbc923728852.jpg"
+    ]
+    },
+    {
+    "count": 1,
+    "imgDesc": "7a5ace7e91f0771dbfc4e929f27fea3.jpg",
+    "urls": [
+    "https://p1.meituan.net/128.180/hotel/dd27179d2b579aadf290923407ad8f431189048.jpg"
+    ]
+    }
+    ],
+    "typeName": "环境",
+    "typeid": "1"
+    }
+    ],
+    "imgListSize": 8,
+    "isPoiCollected": false,
+    "poiInfo": {
+    "lng": 116.459653,
+    "commentModel": {
+    "avgscore": 0,
+    "feedback": [],
+    "guide": "「有用」上线啦！喜欢就大胆赞，点头像有惊喜！",
+    "total_comment": 0,
+    "total_noempty": 0,
+    "total_withpic": 0
+    },
+    "cityId": 1,
+    "tour": {
+    "tourOpenTime": "",
+    "tourDetailDesc": "",
+    "tourMarketPrice": 0,
+    "tourInfo": "是您休闲娱乐的好去处",
+    "tourPlaceName": "Halo Box 光之盒—沉浸式光电娱乐现场"
+    },
+    "cityName": "北京",
+    "quora": {
+    "content": [
+    {
+    "icon": "https://p1.meituan.net/deal/0ca299fbdd39d24c89618b0d4b29c1861966.png",
+    "question": "景点好不好，问问去过的人"
+    }
+    ],
+    "uri": "https://i.meituan.com/awp/h5/lvyou/qapage/qalist/index.html?poiId=187307198"
+    },
+    "frontImg": "https://p0.meituan.net/128.180/hotel/204487b3725a617efd1e69be156fce7c1033987.png",
+    "name": "Halo Box 光之盒—沉浸式光电娱乐现场",
+    "poiid": "187307198",
+    "addr": "朝阳区建国门外大街1号国贸商城3期B座6层",
+    "lat": 39.912547,
+    "desc": {
+    "isGuide": false,
+    "poiIntroAttrs": {
+    "advicePlayHour": "1-2小时",
+    "bestPlayTime": "12月13日-次年3月1日",
+    "detailType": 1,
+    "introTitle": "是您休闲娱乐的好去处"
+    },
+    "text": "查看简介"
+    }
+    }
+    }
+    }

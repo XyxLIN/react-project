@@ -3,11 +3,29 @@ import styled from 'styled-components'
 
 export const ClassifyMainContainer = styled.section`
 
+.am-segment-item-selected{
+    
+    color:#FDB338
+    padding:.5rem;
+}
 
 .shop-content{
     padding-top:1.4rem;
     width:100%;
     
+}
+
+
+
+.am-segment-item:active{
+    color:blue;
+    border:0px;
+    backgroundColor:#fff
+}
+.am-segment-item{
+    color:#333;
+    border:0px;
+    backgroundColor:#fff
 }
 .shop-nav{
     display:flex;

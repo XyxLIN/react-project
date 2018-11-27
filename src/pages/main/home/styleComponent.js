@@ -18,4 +18,9 @@ export const HomeClassifyItem = styled.section`
     height:100%; 
     margin-top:10rem;
     padding:.8rem;
+    .sub-title {
+        color: #888;
+        font-size: 14px;
+        padding: 15px 0 9px 15px;
+      }
 `

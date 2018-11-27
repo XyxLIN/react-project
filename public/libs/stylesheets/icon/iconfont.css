@@ -9,7 +9,7 @@
 
 .iconfont {
   font-family:"iconfont" !important;
-  font-size:18px;
+  font-size:22px;
   font-style:normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -17,7 +17,7 @@
 
 .icon-dongtai:before { content: "\e604"; }
 
-.icon-zizhi:before { content: "\e605"; }
+.icon-zizhi:before { content: "\e605";color :"#42A5F5" }
 
 .icon-shangcheng:before { content: "\e606"; }
 
@@ -27,7 +27,7 @@
 
 .icon-zhaopin:before { content: "\e609"; }
 
-.icon-ziyuan:before { content: "\e60f"; }
+.icon-ziyuan:before { content: "\e60f"; color:'#FFA726'}
 
 .icon-ziyuan1:before { content: "\e614"; }
 
@@ -37,7 +37,7 @@
 
 .icon-icon_baihuo:before { content: "\e610"; }
 
-.icon-icon_wuliu:before { content: "\e615"; }
+.icon-icon_wuliu:before { content: "\e615"; color:'#26A69A' }
 
 .icon-icon_jianzhi:before { content: "\e616"; }
 

@@ -1,14 +1,9 @@
-import  { NavBar , Icon, List} from 'antd-mobile'
+import  { NavBar , Icon} from 'antd-mobile'
 
-import createBrowserHistory from "history/createBrowserHistory";
-
-import {Link} from 'react-router-dom'
-
-import {Router} from 'react-router'
 
 import React , { Component} from 'react'
 
-const customHistory = createBrowserHistory();
+
 
 
 
@@ -22,9 +17,9 @@ class ClassifyNavBar extends Component {
         return (
             <div>
                  <NavBar
-                    style={{backgroundColor:'#FF7043',color:'#fff',display:'fixed'}}
+                    style={{color:'#333',position:'relative'}}
                     mode="light"
-                    icon={<Icon type="left" />}
+                    icon={<Icon type="left"/>}
                     onLeftClick={() => {
                         this.props.router.replace({
                             pathname: '/',
@@ -35,7 +30,7 @@ class ClassifyNavBar extends Component {
                         <Icon key="0" type="search" style={{ marginRight: '16px' }} />,
                         <Icon key="1" type="ellipsis" />,
                     ]}
-                    ><span style={{color:'#fff',textAlign:'center'}}>周边游</span>
+                    ><span style={{color:'#333',fontSize:'20px',fontFamily:'Microsoft Yahei',textAlign:'center'}}>周边游</span>
                     
                 </NavBar>
                    

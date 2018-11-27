@@ -9,13 +9,24 @@ import SwiperImage from '@As/images/swiper-1.png'
 
 import connect from '../../../connect'
 
+
+
 class HomeSwiper extends Component {
+    
+    constructor (props){
+        super(props)
+        this.state = {
+            items:[]
+        }
+        
+    }
+
+  
     
     componentDidMount(){
 
         this.props.main_actions.getListAsync()
     }
-    
     render(){
         return(
             <HomeSwiperContainer>
@@ -24,7 +35,7 @@ class HomeSwiper extends Component {
                 autoplay={true}
                 infinite
               >
-              {/* {this.renderSwiperList()} */}
+             
               {this.renderSwiperList()}
             <img  src={SwiperImage} ></img>
              
@@ -37,6 +48,7 @@ class HomeSwiper extends Component {
     }
 
     renderSwiperList(){
+        
         let { list } =  this.props.main
         list = list.splice(0,1)
         if( !list.length) return ' ';
@@ -48,6 +60,8 @@ class HomeSwiper extends Component {
                 style={{ width: '100%', verticalAlign: 'top' }}
             />
         )) 
+       
+      
     }   
      
     

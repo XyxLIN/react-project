@@ -7,6 +7,8 @@ import {ClassifyMainContainer} from './styleComponent'
 
 import ListView from '../../../components/commons/List'
 
+import { SegmentedControl, WingBlank } from 'antd-mobile';
+
 const data =[ 
 
     {id:1,title:'热门推荐',type:"now-playing"},
@@ -16,6 +18,13 @@ const data =[
 ]
 
 class  classifyContainer extends Component{
+
+    onChange = (e) => {
+        console.log(`selectedIndex:${e.nativeEvent.selectedSegmentIndex}`);
+      }
+      onValueChange = (value) => {
+        console.log(value);
+      }
    
     render(){      
             // var index = data.length-1;
@@ -33,12 +42,19 @@ class  classifyContainer extends Component{
     
         return (
             <div>
-                <ClassifyNavBar></ClassifyNavBar>
+                <ClassifyNavBar ></ClassifyNavBar>
                 
                 <ClassifyMainContainer >
-                    
-                        {/* {items} */}
-                    
+                    <WingBlank >  
+                        {/* <p className="sub-title">onChange/onValueChange</p> */}
+                        <SegmentedControl 
+                        values={['热门推荐', '热门活动', '筛选']}
+                        onChange={this.onChange}
+                        onValueChange={this.onValueChange}
+                        style={{color:'#333'}}
+                        />
+                    </WingBlank>
+                                
                 </ClassifyMainContainer>
 
                 <ListView></ListView>
