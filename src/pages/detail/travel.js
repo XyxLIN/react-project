@@ -9,7 +9,8 @@ class TravelContainer extends Component{
 
     componentWillMount(){
         
-        this.props.main_actions.getListAsync()
+        this.props.main_actions.getDetail()
+        console.log(this.props)
       
 
     }
@@ -28,4 +29,4 @@ class TravelContainer extends Component{
     }
 
 }
-export default connect(TravelContainer,[{ name:'main' , state:['list']}])
+export default connect(TravelContainer,[{ name:'main' , state:['detail']}])

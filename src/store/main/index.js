@@ -14,6 +14,7 @@ const reducer = (
     previous_state = default_state,
     action
 )=>{
+    console.log(action.type)
     let new_state = Object.assign({},previous_state)
 
     switch(action.type){
@@ -22,9 +23,9 @@ const reducer = (
 
             new_state.list = action.payload.data.data;break;
         
-        case types.GET_SWIPER+'_FULFILLED':
-
-            new_state.swiper = action.payload.data.data;break;
+        case types.GET_DETAIL+'_FULFILLED':
+            
+            new_state.detail= action.payload.data.data;break;
 
 
         

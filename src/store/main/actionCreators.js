@@ -11,10 +11,11 @@ export default{
             payload: axios.get('/mock/travel.json')
         }                                                                                                                            
     },
-    getSwiper(){
+    getDetail(){
+        console.log(111)
         return {
-            type: types.GET_SWIPER,
-            payload: axios.get('/mock/swiper.json')
+            type: types.GET_DETAIL,
+            payload: axios.get('/mock/detail.json')
             
         }    
     }
