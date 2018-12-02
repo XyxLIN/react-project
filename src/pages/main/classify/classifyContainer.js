@@ -7,6 +7,8 @@ import {ClassifyMainContainer} from './styleComponent'
 
 import ListView from '../../../components/commons/List'
 
+import { withRouter} from 'react-router-dom'
+
 import { SegmentedControl, WingBlank } from 'antd-mobile';
 
 const data =[ 
@@ -18,14 +20,20 @@ const data =[
 ]
 
 class  classifyContainer extends Component{
-
+    // shouldComponentUpdate(props,state){
+    //     let { pathanme } = props.location
+    //     let { pathname:_pathname } = this.props.location
+    //     console.log(this.props.location)
+    //     if (pathanme === '/') return false
+    //     return true
+    // }
     onChange = (e) => {
         console.log(`selectedIndex:${e.nativeEvent.selectedSegmentIndex}`);
       }
       onValueChange = (value) => {
         console.log(value);
       }
-   
+    
     render(){      
             // var index = data.length-1;
             // let items=[];
@@ -45,15 +53,15 @@ class  classifyContainer extends Component{
                 <ClassifyNavBar ></ClassifyNavBar>
                 
                 <ClassifyMainContainer >
-                    <WingBlank >  
-                        {/* <p className="sub-title">onChange/onValueChange</p> */}
+                    {/* <WingBlank >  
+                        <p className="sub-title">onChange/onValueChange</p>
                         <SegmentedControl 
                         values={['热门推荐', '热门活动', '筛选']}
                         onChange={this.onChange}
                         onValueChange={this.onValueChange}
                         style={{color:'#333'}}
                         />
-                    </WingBlank>
+                    </WingBlank> */}
                                 
                 </ClassifyMainContainer>
 
@@ -65,4 +73,4 @@ class  classifyContainer extends Component{
 
 }
 
-export default classifyContainer
+export default withRouter(classifyContainer)

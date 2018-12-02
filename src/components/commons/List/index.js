@@ -6,6 +6,8 @@ import connect from '../../../connect'
 
 import {TravelList} from './styleComponent'
 
+import {withRouter,Link} from 'react-router-dom'
+
 
 function MyBody(props) {
   return (
@@ -75,7 +77,7 @@ class Demo extends React.Component {
     setTimeout(() => {
       genData();
       this.setState({
-        dataSource: this.state.dataSource.cloneWithRowsAndSections(dataBlobs, sectionIDs, rowIDs),
+        dataSource: this.state.dataSource.cloneWithRowsAndSections(dataBlobs, sectionIDs, sectionIDs),
         isLoading: false,
         // height: hei,
       });
@@ -129,8 +131,8 @@ class Demo extends React.Component {
       }
       const obj = list[index--];
       return (
-      <div key={rowID} style={{ padding: '0 15px' }} >
-      
+      <div key={rowID} style={{ padding: '0 15px' }} onClick={()=>{this.handle(obj)}} >
+        
             <div style={{ display: '-webkit-box', display: 'flex', padding: '15px 0' }}>
                 
                 <img style={{ height: '70px', marginRight: '15px', width:'4.8rem'}} src={obj.frontImg} alt="" overflow="hidden"/>
@@ -152,6 +154,7 @@ class Demo extends React.Component {
                     </div>                  
                 </div>                           
           </div>
+          
         </div>
       );
     };
@@ -179,7 +182,21 @@ class Demo extends React.Component {
         onEndReachedThreshold={10}
       />
     );
+   
   }
+  handle(v){
+    // console.log(this.props,'111')
+  
+    this.props.history.push(`/Detail/${v.poiid}`)
+
+    if(this.props.location.pathname.startsWith('/Detail')){
+
+        
+    }
+    // this.props.history.replace(`/Detail/${v.poiid}`)
+     
+
+    }
 }
 
-export default  connect(Demo,[{ name:'main' , state:['list']}])
+export default  withRouter(connect(Demo,[{ name:'main' , state:['list']}]))

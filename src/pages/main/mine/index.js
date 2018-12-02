@@ -4,6 +4,8 @@ import React from 'react'
 
 import Header from '@commons/Header/mine'
 
+import { withRouter} from 'react-router-dom'
+
 const data = [{
   url: 'https://zos.alipayobjects.com/rmsportal/PZUUCKTRIHWiZSY.jpeg',
   id: '2121',
@@ -14,6 +16,14 @@ class MineContainer extends React.Component {
     files: data,
     multiple: false,
   }
+  shouldComponentUpdate(props,state){
+    let { pathanme } = props.location
+    console.log(this.props)
+    let { pathname:_pathname } = this.props.location
+    console.log(this.props.location)
+    if (pathanme === '/') return false
+    return true
+}
   onChange = (files, type, index) => {
     // console.log(files, type, index);
     this.setState({
@@ -22,6 +32,10 @@ class MineContainer extends React.Component {
   }
   onChange = (key) => {
     // console.log(key);
+  }
+
+  componentDidMount(){
+  //  console.log(this.props.history)
   }
   render() {
     const { files } = this.state;
@@ -64,4 +78,4 @@ class MineContainer extends React.Component {
   }
 }
 
-export default MineContainer
+export default withRouter(MineContainer)

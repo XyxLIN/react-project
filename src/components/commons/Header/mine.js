@@ -2,7 +2,7 @@ import  { NavBar , Icon, List} from 'antd-mobile'
 
 import createBrowserHistory from "history/createBrowserHistory";
 
-import {Link} from 'react-router-dom'
+import {Link,withRouter} from 'react-router-dom'
 
 import {Router} from 'react-router'
 
@@ -19,6 +19,10 @@ const customHistory = createBrowserHistory();
 // const { Item } = List;
 
 class MineNavBar extends Component {
+
+    constructor(props){
+        super(props)
+    }
     
     render () {
         return (
@@ -28,10 +32,12 @@ class MineNavBar extends Component {
                     mode="light"
                     icon={<Icon type="left" />}
                     onLeftClick={() => {
-                        this.props.router.replace({
-                            pathname: '/',
+                        this.props.history.goBack()
+                        // this.props.router.replace({
+                        //     pathname: '/',
                             
-                        })
+                        // })
+                        // console.log(this.props.history)
                     }}
                     rightContent={[
                         <Icon key="0" type="search" style={{ marginRight: '16px' }} />,
@@ -46,4 +52,4 @@ class MineNavBar extends Component {
     }
 }
 
-export default MineNavBar
+export default withRouter(MineNavBar)
