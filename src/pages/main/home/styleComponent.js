@@ -4,6 +4,17 @@ import styled from 'styled-components'
 export const HomeWrapper = styled.section`
     width: 100%;
     height:100%; 
+    .placeholder {
+        background-color: #ebebef;
+        color: #bbb;
+        text-align: center;
+        height: 30px;
+        line-height: 30px;
+        width: 100%;
+      }
+      .home{
+          margin-top:30px;
+      }
 `
 export const HomeSwiperContainer = styled.div`
 width:100%;

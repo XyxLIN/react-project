@@ -25,15 +25,17 @@ import { Grid } from 'antd-mobile';
 
 import uuid from 'uuid'
 
+import {withRouter} from 'react-router-dom'
+
 import Homeclassify from '@pages/main/classify/classifyContainer'
 
 
 const HomeIcon=[
       {
-        id:uuid(),title:'活动',Component:<Homeclassify/>,img:Balloon
+        id:uuid(),title:'活动',url:"/Intel",Component:<Homeclassify/>,img:Balloon
       },
       {
-        id:uuid(),title:'资源',Component:<Homeclassify/>,img: Drinks
+        id:uuid(),title:'资源',url:"/mine",Component:<Homeclassify/>,img: Drinks
       },
       {
         id:uuid(),title:'公告',Component:<Homeclassify/>,img:Notice
@@ -61,27 +63,34 @@ const HomeIcon=[
 const data = Array.from(HomeIcon).map((_val, i) => ({
     icon:_val.img,
     text: _val.title,
+    Component:_val.Component,
+    url:_val.url,
+    index:i
   }));
 
 const GridList = () =>(
       < div >
            <div className="sub-title"></div>
-            <Grid data={data} isCarousel onClick={_el => console.log(_el)} />
+            <Grid data={data} isCarousel onClick={_el =>(data[_el.index].Component)} />
       </div>
   )
 
 class HomeClassifyContainer extends Component {
-    
+    constructor(props){
+      super(props)
+     
+    }
 
       
       render(){
           return (
             < HomeClassifyItem>
-                <GridList></GridList>
+                <span style={{ marginTop:'1rem',fontSize:'16px',color:'#888'}}>---精品分类---</span>
+                <Grid data={data} isCarousel onClick={_el =>(this.props.history.push(data[_el.index].url))} />
             </HomeClassifyItem>     
               
           )
       }
   }
 
-export default HomeClassifyContainer
+export default withRouter(HomeClassifyContainer)

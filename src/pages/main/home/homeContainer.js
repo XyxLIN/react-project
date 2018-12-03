@@ -10,6 +10,9 @@ import HomeSwiper from './homeSwiper'
 
 import HomeClassifyContainer from './homeClassify'
 
+import {withRouter} from 'react-router-dom'
+
+import HomeList from './homeList'
 class HomeContainer extends Component{
 
     render(){
@@ -19,10 +22,11 @@ class HomeContainer extends Component{
                 <Header></Header>
                 <HomeSwiper></HomeSwiper>
                 <HomeClassifyContainer></HomeClassifyContainer>
+                <HomeList className="home"></HomeList>
             </HomeWrapper>
            
         )
     }
 }
 
-export default HomeContainer
+export default withRouter(HomeContainer)    

@@ -5,7 +5,9 @@ import { Carousel} from 'antd-mobile';
 
 import  {HomeSwiperContainer } from './styleComponent'
 
-import SwiperImage from '@As/images/swiper-1.png'
+// import SwiperImage from '@As/images/swiper-1.png'
+
+import {withRouter} from 'react-router-dom'
 
 import connect from '../../../connect'
 
@@ -29,19 +31,10 @@ class HomeSwiper extends Component {
     }
     render(){
         return(
-            <HomeSwiperContainer>
-                
-              <Carousel
-                autoplay={true}
-                infinite
-              >
-             
-              {this.renderSwiperList()}
-            <img  src={SwiperImage} ></img>
-             
-              </Carousel>
-    
-        
+            <HomeSwiperContainer>                             
+                 
+                {this.renderSwiperList()}
+                  
             </HomeSwiperContainer>
            
         )
@@ -49,22 +42,29 @@ class HomeSwiper extends Component {
 
     renderSwiperList(){
         
-        let { list } =  this.props.main
-        list = list.splice(0,1)
+        let { list } =  this.props.main     
         if( !list.length) return ' ';
-        return list.map(val => (
-            <img
-                key={val.cityId}
-                src={val.frontImg}
-                alt=""
-                style={{ width: '100%', verticalAlign: 'top' }}
-            />
-        )) 
-       
-      
+        list = list.splice(0,2)
+        return (
+            <Carousel
+                autoplay={true}
+                infinite
+            >    
+               
+                { list.map(val =>(
+                    <img
+                        key={val.cityId}
+                        src={val.frontImg}
+                        alt=""
+                        style={{ width: '100%',verticalAlign: 'top' }}
+                />
+                ))}
+            </Carousel>
+        )
+ 
     }   
      
     
 }
 
-export default connect(HomeSwiper,[{ name:'main' , state:['list']}])
+export default withRouter(connect(HomeSwiper,['main']))
